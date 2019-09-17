@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	//Game Manager Stuff
+	public static GameManager GM;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void Awake()
+	{
+		if(GM == null){GM = this;}
+		else{Debug.LogError("Only one GM"); Destroy(gameObject);}
+	}
 }

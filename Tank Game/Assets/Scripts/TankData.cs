@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TanksData : MonoBehaviour
+public class TankData : MonoBehaviour
 {
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+	public float speed = 1;
+	public float rotateSpeed = 90;
+	public int health = 1;
 
 }
