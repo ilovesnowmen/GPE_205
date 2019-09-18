@@ -337,6 +337,7 @@ MonoBehaviour:
   input: 0
   data: {fileID: 0}
   motor: {fileID: 0}
+  gun: {fileID: 0}
 --- !u!114 &1177483326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +353,10 @@ MonoBehaviour:
   speed: 1
   rotateSpeed: 90
   health: 1
+  fireDelay: 1
+  shellForce: 1
+  shellDamage: 1
+  canFire: 1
 --- !u!43 &1475854847
 Mesh:
   m_ObjectHideFlags: 0
@@ -627,6 +632,10 @@ MonoBehaviour:
   speed: 1
   rotateSpeed: 90
   health: 1
+  fireDelay: 1
+  shellForce: 1
+  shellDamage: 1
+  canFire: 1
 --- !u!1 &1896819183
 GameObject:
   m_ObjectHideFlags: 0
