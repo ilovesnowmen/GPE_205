@@ -34,7 +34,9 @@ public class InputController : MonoBehaviour
 				if (Input.GetKeyDown(KeyCode.Space))
 				{ 
 					//check to see if you can fire
+					if (data.canFire == true) { gun.Fire(data.shellForce, data.shellDamage);}
 					//fire gun
+					//Set delay
 				}
 				break;
 		}

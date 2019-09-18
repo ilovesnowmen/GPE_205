@@ -12,4 +12,5 @@ public class TankData : MonoBehaviour
 	public float shellForce = 1;
 	public float shellDamage = 1;
 	public bool canFire = true;
+	public Rigidbody shellType;
 }

@@ -2,12 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(TankData))]
+
+
 public class Gun : MonoBehaviour
 {
 
+	public TankData data;
+	public Transform tf;
+
+
     void Start()
     {
-        
+	    if (data == null) {data = gameObject.GetComponent<TankData>();}
+	    if (tf == null){tf = gameObject.GetComponent<Transform>();}
     }
 
     void Update()
@@ -15,12 +23,10 @@ public class Gun : MonoBehaviour
         
     }
 
-	public void Fire(float force, float damage)
-	{
-		//create a shell
-		//add force to shell in forward
-		//set shell information like damage possibly force
-
-	}
-
+    public void Fire(float force, float damage)
+    {
+	    Rigidbody clone;
+	    clone = Instantiate(data.shellType, tf.position, tf.rotation);
+	    clone.velocity = transform.TransformDirection(Vector3.forward * data.shellForce);
+    }
 }
