@@ -7,6 +7,9 @@ public class TankData : MonoBehaviour
 
 	public float speed = 1;
 	public float rotateSpeed = 90;
-	public int health = 1;
-
+	public float health = 1;
+	public float fireDelay = 1;
+	public float shellForce = 1;
+	public float shellDamage = 1;
+	public bool canFire = true;
 }
